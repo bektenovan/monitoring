@@ -1,0 +1,677 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Outfit:wght@100;200;300;400;500&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+h1,p, a, h4, h3{
+color: white;
+
+}
+p{
+font-size: 20px;
+}
+
+body{
+font-family: 'Outfit';
+}
+ul{
+    list-style-type: none;
+}
+a:hover{
+    text-decoration: none;
+    color:green
+}
+.btn{
+    padding: 12px 32px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    background: transparent;
+    color: #fff;
+    border:1px soloid #fff;
+    cursor: pointer;
+}
+.btn-light{
+    background-color: rgb(255, 255,255, .2);
+}
+.btn:hover{
+    background-color: rgb(255, 255,255, .2);
+
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    z-index: 10;
+}
+
+.header-bg {
+    background-color: rgba(0,0,0, .85);
+    transition: .5s;
+}
+
+.nav-menu {
+    display: flex;
+    
+}
+
+.nav-menu li {
+    padding: 0 1rem;
+    margin-top: 10px;
+}
+
+.nav-menu a {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.hamburger {
+    display: none;
+}
+@media screen and (max-width:700px) {
+    .img {
+   height: 70px;
+    }
+}
+@media screen and (max-width:1240px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: -100%;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        transition: 0.3s;
+        z-index: -1;
+        background: rgba(0,0,0, .9);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        padding: 1rem 0;
+    }
+
+    .nav-menu a {
+        font-size: 2rem;
+    }
+}
+
+
+
+#video {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    object-fit: contain;
+}
+
+.hero .content {
+    text-align: center;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    top: 40vh;
+}
+
+.hero .content h1 {
+    font-size: 4rem;
+    color: white;
+}
+
+.hero p {
+    font-size: 1.8rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    color:white;
+}
+
+.hero .btn {
+    margin: 1rem .2rem;
+}
+
+@media screen and (max-width:640px) {
+    .content h1 {
+        font-size: 3rem;
+    }
+
+    .content p {
+        font-size: 1.4rem;
+        margin-bottom: 1.6rem;
+    }
+}
+.footer {
+    width: 100%;
+    padding: 6rem 0;
+    background: rgba(0,0,0,.8);
+}
+
+.footer-container {
+    max-width: 1140px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+}
+
+.footer .left {
+    height: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.footer .right {
+    height: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: auto;
+}
+
+.footer h4 {
+    font-size: 1.4rem;
+    padding: 1rem 0;
+}
+
+.footer p {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+}
+
+.footer .location {
+    display: flex;
+    align-items: center;
+}
+
+.footer .location p {
+    padding-bottom: .5rem;
+}
+
+.footer .location h4 {
+    padding-top: 0;
+}
+
+@media screen and (max-width:640px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .right .social {
+        margin: auto;
+    }
+}
+.round {
+    border-radius: 100px; /* Радиус скругления */
+    border: 3px solid green; /* Параметры рамки */
+    box-shadow: 0 0 7px #666; /* Параметры тени */
+   }
+   .signup .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+  
+}
+
+.signup .left {
+    text-align: center;
+}
+
+.signup img {
+    width: 500px;
+}
+
+.signup img:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+}
+
+.signup .right p {
+    margin: 2rem 0;
+}
+
+@media screen and (max-width:940px) {
+    .signup .container {
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width:510px) {
+    .signup img{
+       width: 300px;
+    }
+}
+.signup{
+    background-color: #fff;
+}
+.image {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.herow {
+    height: 100vh;
+    width: 100%;
+    object-fit: contain;
+}
+
+.herow .content {
+    text-align: center;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    top: 40vh;
+}
+
+.herow .content h1 {
+    font-size: 4rem;
+    color: white;
+}
+
+.herow p {
+    font-size: 1.8rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    color:white;
+}
+
+.herow .btn {
+    margin: 1rem .2rem;
+}
+
+@media screen and (max-width:640px) {
+    .content h1 {
+        font-size: 3rem;
+    }
+
+    .content p {
+        font-size: 1.4rem;
+        margin-bottom: 1.6rem;
+    }
+}
+body{
+    margin-top:20px;
+    background-color:#e9ebee;
+}
+
+.be-comment-block {
+    margin-bottom: 50px !important;
+    border: 1px solid #edeff2;
+    border-radius: 2px;
+    padding: 50px 70px;
+    border:1px solid #ffffff;
+}
+
+.comments-title {
+    font-size: 16px;
+    color: #262626;
+    margin-bottom: 15px;
+    font-family: 'Conv_helveticaneuecyr-bold';
+}
+
+.be-img-comment {
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-bottom: 15px;
+}
+
+.be-ava-comment {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.be-comment-content {
+    margin-left: 80px;
+}
+
+.be-comment-content span {
+    display: inline-block;
+    width: 49%;
+    margin-bottom: 15px;
+}
+
+.be-comment-name {
+    font-size: 13px;
+    font-family: 'Conv_helveticaneuecyr-bold';
+}
+
+.be-comment-content a {
+    color: #383b43;
+}
+
+.be-comment-content span {
+    display: inline-block;
+    width: 49%;
+    margin-bottom: 15px;
+}
+
+.be-comment-time {
+    text-align: right;
+}
+
+.be-comment-time {
+    font-size: 11px;
+    color: #b4b7c1;
+}
+
+.be-comment-text {
+    font-size: 13px;
+    line-height: 18px;
+    color: #7a8192;
+    display: block;
+    background: #f6f6f7;
+    border: 1px solid #edeff2;
+    padding: 15px 20px 20px 20px;
+}
+
+.form-group.fl_icon .icon {
+    position: absolute;
+    top: 1px;
+    left: 16px;
+    width: 48px;
+    height: 48px;
+    background: #f6f6f7;
+    color: #b5b8c2;
+    text-align: center;
+    line-height: 50px;
+    -webkit-border-top-left-radius: 2px;
+    -webkit-border-bottom-left-radius: 2px;
+    -moz-border-radius-topleft: 2px;
+    -moz-border-radius-bottomleft: 2px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.form-group .form-input {
+    font-size: 13px;
+    line-height: 50px;
+    font-weight: 400;
+    color: #b4b7c1;
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid #edeff2;
+    border-radius: 3px;
+}
+
+.form-group.fl_icon .form-input {
+    padding-left: 70px;
+}
+
+.form-group textarea.form-input {
+    height: 150px;
+}
+.comment-text{
+    color: black;
+}
+
+.chat-btn{
+    color: black;
+}
+
+
+@media screen and (max-width:400px) {
+    .cart {
+  
+  width: 100px;
+    }
+    
+   
+}
+
+@media screen and (max-width:900px) {
+    .details {
+       display: flex;
+       flex-wrap: wrap;
+       align-content: flex-start;
+       }
+       .details-image{
+        width: 500px;
+        display: flex;
+        justify-content: center;
+       }
+      
+}
+/* @media screen and (max-width:630px) {
+    .details-info {
+     width: 100%;
+       }
+       
+      
+} */
+
+.comments {
+    margin-top: 20px;
+  }
+  
+  .comments-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .comments-container {
+    margin-top: 40px;
+  }
+  
+  .comment-form-title {
+    font-size: 22px;
+  }
+  
+  .comment-form-textarea {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    border: 1px solid rgb(107, 114, 12);
+  }
+  
+  .comment-form-button {
+    font-size: 16px;
+    padding: 8px 16px;
+    background: rgb(59, 130, 246);
+    border-radius: 8px;
+    color: white;
+  }
+  
+  .comment-form-button:hover:enabled {
+    cursor: pointer;
+    background: rgb(37, 99, 235);
+  }
+  
+  .comment-form-button:disabled {
+    opacity: 0.7;
+    cursor: default;
+  }
+  
+  .comment-form-cancel-button {
+    margin-left: 10px;
+  }
+  
+  .comment {
+    display: flex;
+    margin-bottom: 28px;
+  }
+  
+  .comment-image-container {
+    margin-right: 12px;
+  }
+  
+  .comment-image-container img {
+    border-radius: 50px;
+  }
+  
+  .comment-right-part {
+    width: 100%;
+  }
+  
+  .comment-content {
+    display: flex;
+  }
+  
+  .comment-author {
+    margin-right: 8px;
+    font-size: 20px;
+    color: rgb(59, 130, 246);
+  }
+  
+  .comment-text {
+    font-size: 18px;
+  }
+  
+  .comment-actions {
+    display: flex;
+    font-size: 12px;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    margin-top: 8px;
+  }
+  
+  .comment-action {
+    margin-right: 8px;
+  }
+  
+  .comment-action:hover {
+    text-decoration: underline;
+  }
+  
+  .replies {
+    margin-top: 20px;
+  }
+
+
+
+  .page-section {
+    padding: 60px 0;
+}
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+.signup {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.signup .container {
+    display: flex;
+    /* justify-content: space-around; */
+    /* align-items: center; */
+}
+
+.signup .left,
+.signup .right {
+    width: 45%;
+}
+
+.btn-dark {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn-dark:hover {
+    background-color: #555;
+}
+
+.input-container {
+    margin-top: 20px;
+}
+
+.text-dark {
+    color: #333;
+}
+
+/* Удалить подчеркивание у всех ссылок */
+a {
+  text-decoration: none;
+}
+
+/* Опционально, можно добавить эффект при наведении курсора */
+a:hover {
+  text-decoration: underline; /* Если хотите, чтобы подчеркивание появлялось при наведении */
+}
+
+@media (max-width: 1185px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left {
+    order: 2; /* Перемещаем блок left вниз */
+  }
+
+  .right {
+    order: 1; /* Перемещаем блок right вверх */
+
+
+  }
+}
+@media (max-width: 1185px) {
+  .right{
+    width: 50%;
+  }
+}
+
+
+
+
+
+
