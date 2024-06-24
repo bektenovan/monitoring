@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://bektenovan01:kgtu01@cluster0.ql7m1aj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.connect(process.env.MONGODB_URI)
     .then(() => console.log('MongoDB database connection established successfully'))
     .catch(err => console.log(err));
 
@@ -58,6 +58,6 @@ app.use('/api/vacancies', vacancyRoutes);
 
 
 // Start server
-app.listen(port, () => {
+app.listen(process.env.PORT || 4444 || port, () => {
     console.log(`Server is running on port: ${port}`);
 });
